@@ -44,9 +44,9 @@ public class Vector
         a.coordinates = a.coordinates.Select(x => x * b).ToArray();
         return a;
     }
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
     {
-        if (obj is Vector other)
+        if (obj is Vector other && obj != null)
         {
             if (coordinates.Length != other.coordinates.Length)
             {
