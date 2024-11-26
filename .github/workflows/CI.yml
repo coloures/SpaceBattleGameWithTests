@@ -1,8 +1,11 @@
 name: Main CI-pipeline
 
 on:
-  push:
   pull_request:
+    branches: [ main ]
+    paths:
+    - '**.cs'
+    - '**.csproj'
 
 jobs:
   build:
@@ -32,5 +35,5 @@ jobs:
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          path-to-lcov: ${{ github.workspace }}/SpaceBattle.Tests/TestResults/coverage.cobertura.xml
+          path-to-lcov: ./TestResults/coverage.cobertura.xml
           coveralls-repo-token: ${{ secrets.COVERALLS_REPO_TOKEN }}
