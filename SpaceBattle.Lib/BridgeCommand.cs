@@ -4,7 +4,7 @@ public class BridgeCommand : ICommand, IInjectable
     private ICommand? command;
     public void Execute()
     {
-        command.Execute();
+        command!.Execute();
     }
     public void Inject(ICommand cmd)
     {
