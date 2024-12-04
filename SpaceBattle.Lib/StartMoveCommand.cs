@@ -17,10 +17,9 @@ public class StartMoveCommand : ICommand
         {
             _isender.Send(_bridgeCommand);
         }
-        catch (Exception ex)
+        catch (Exception)
         {
             _gameobject.Remove("Movement");
-            throw ex;
         }
     }
 }

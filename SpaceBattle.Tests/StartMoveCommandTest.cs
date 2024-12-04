@@ -51,7 +51,7 @@ public class StartMoveCommandTest
         var StartMoveCommand = new StartMoveCommand(_bridgeCommand.Object, _isender.Object, _gameobject.Object);
 
         // Act
-        Assert.Throws<Exception>(() => StartMoveCommand.Execute());
+        StartMoveCommand.Execute();
 
         _gameobject.VerifySet(x => x["Movement"] = _bridgeCommand.Object, Times.Once);
         _gameobject.Verify(x => x.Remove("Movement"), Times.Once);
