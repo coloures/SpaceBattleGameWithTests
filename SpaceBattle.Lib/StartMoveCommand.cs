@@ -1,9 +1,9 @@
 ﻿namespace SpaceBattle.Lib;
 public class StartMoveCommand : ICommand
 {
-    public BridgeCommand _bridgeCommand { get; }
-    public ISender _isender { get; }
-    public IDictionary<string, object> _gameobject { get; }
+    private readonly BridgeCommand _bridgeCommand;
+    private readonly ISender _isender;
+    private readonly IDictionary<string, object> _gameobject;
     public StartMoveCommand(BridgeCommand bridgeCommand, ISender isender, IDictionary<string, object> gameobject)
     {
         _bridgeCommand = bridgeCommand;
