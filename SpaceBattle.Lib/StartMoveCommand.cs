@@ -13,6 +13,14 @@ public class StartMoveCommand : ICommand
     public void Execute()
     {
         _gameobject["Movement"] = _bridgeCommand;
-        _isender.Send(_bridgeCommand);
+        try
+        {
+            _isender.Send(_bridgeCommand);
+        }
+        catch (Exception ex)
+        {
+            _gameobject.Remove("Movement");
+            throw ex;
+        }
     }
 }
