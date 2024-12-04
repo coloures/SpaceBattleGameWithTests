@@ -19,6 +19,7 @@ public class StartMoveCommandTest
         // Assert
 
         _isender.Verify(x => x.Send(It.IsAny<ICommand>()), Times.Once);
+        _gameobject.Verify(x => x.Remove("Movement"), Times.Never);
         _gameobject.VerifySet(x => x["Movement"] = _bridgeCommand.Object, Times.Once);
     }
     [Fact]
@@ -36,7 +37,6 @@ public class StartMoveCommandTest
         Assert.Throws<Exception>(() => StartMoveCommand.Execute());
 
         _gameobject.VerifySet(x => x["Movement"] = _bridgeCommand.Object, Times.Once);
-        Assert.True(!_gameobject.Object.ContainsKey("Movement"));
         _isender.Verify(x => x.Send(It.IsAny<ICommand>()), Times.Never);
     }
     [Fact]
@@ -55,7 +55,6 @@ public class StartMoveCommandTest
 
         _gameobject.VerifySet(x => x["Movement"] = _bridgeCommand.Object, Times.Once);
         _gameobject.Verify(x => x.Remove("Movement"), Times.Once);
-        Assert.True(!_gameobject.Object.ContainsKey("Movement"));
         _isender.Verify(x => x.Send(It.IsAny<ICommand>()), Times.Once);
     }
 }
