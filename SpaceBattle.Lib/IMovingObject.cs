@@ -1,4 +1,4 @@
-namespace SpaceBattle.Lib;
+﻿namespace SpaceBattle.Lib;
 public interface IMovingObject
 {
     public Vector Location { get; set; }
@@ -7,7 +7,7 @@ public interface IMovingObject
 
 public class Vector
 {
-    int[] coordinates;
+    private int[] coordinates;
     public Vector(params int[] coordinates)
     {
         this.coordinates = coordinates;
@@ -18,6 +18,7 @@ public class Vector
         {
             throw new Exception();
         }
+
         a.coordinates = a.coordinates.Zip(b.coordinates, (x, y) => x + y).ToArray<int>();
         return a;
     }
@@ -34,9 +35,11 @@ public class Vector
             {
                 return false;
             }
+
             var result = coordinates.Zip(other.coordinates, (x, y) => x == y ? true : false).ToArray<bool>();
             return result.All(x => x == true);
         }
+
         return false;
     }
 

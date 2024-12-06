@@ -1,6 +1,5 @@
-namespace SpaceBattle.Tests;
+﻿namespace SpaceBattle.Tests;
 using SpaceBattle.Lib;
-using Moq;
 
 public class VectorTest
 {
@@ -65,7 +64,6 @@ public class VectorTest
             var vector3 = vector1 + vector2;
         });
 
-
     }
     [Fact]
     public void TestMultiplicationVector()
@@ -74,14 +72,12 @@ public class VectorTest
         var vector2 = vector1 * 100;
         Assert.Equal(new Vector(1000, 500), vector2);
 
-
     }
     [Fact]
     public void TestGetHashCode()
     {
         var vector1 = new Vector(10, 5);
         Assert.Equal(vector1.GetHashCode(), (1 * 31 + 10.GetHashCode()) * 31 + 5.GetHashCode());
-
 
     }
 }
