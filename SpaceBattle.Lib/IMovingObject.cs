@@ -34,7 +34,7 @@ public class Vector
             {
                 return false;
             }
-            bool[] result = coordinates.Zip(other.coordinates, (x, y) => x == y ? true : false).ToArray<bool>();
+            var result = coordinates.Zip(other.coordinates, (x, y) => x == y ? true : false).ToArray<bool>();
             return result.All(x => x == true);
         }
         return false;
