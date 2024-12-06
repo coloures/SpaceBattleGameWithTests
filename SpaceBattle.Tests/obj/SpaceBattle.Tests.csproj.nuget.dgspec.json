@@ -1,25 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jarz0\\OneDrive\\Документы\\GitHub\\OOP_3sem\\SpaceBattle_official\\SpaceBattle.Tests\\SpaceBattle.Tests.csproj": {}
+    "C:\\Users\\computer\\Desktop\\Zaslavsckiy\\SpaceBattle.Tests\\SpaceBattle.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jarz0\\OneDrive\\Документы\\GitHub\\OOP_3sem\\SpaceBattle_official\\SpaceBattle.Lib\\SpaceBattle.Lib.csproj": {
+    "C:\\Users\\computer\\Desktop\\Zaslavsckiy\\SpaceBattle.Lib\\SpaceBattle.Lib.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jarz0\\OneDrive\\Документы\\GitHub\\OOP_3sem\\SpaceBattle_official\\SpaceBattle.Lib\\SpaceBattle.Lib.csproj",
+        "projectUniqueName": "C:\\Users\\computer\\Desktop\\Zaslavsckiy\\SpaceBattle.Lib\\SpaceBattle.Lib.csproj",
         "projectName": "SpaceBattle.Lib",
-        "projectPath": "C:\\Users\\jarz0\\OneDrive\\Документы\\GitHub\\OOP_3sem\\SpaceBattle_official\\SpaceBattle.Lib\\SpaceBattle.Lib.csproj",
-        "packagesPath": "C:\\Users\\jarz0\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jarz0\\OneDrive\\Документы\\GitHub\\OOP_3sem\\SpaceBattle_official\\SpaceBattle.Lib\\obj\\",
+        "projectPath": "C:\\Users\\computer\\Desktop\\Zaslavsckiy\\SpaceBattle.Lib\\SpaceBattle.Lib.csproj",
+        "packagesPath": "C:\\Users\\computer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\computer\\Desktop\\Zaslavsckiy\\SpaceBattle.Lib\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jarz0\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -58,34 +60,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\jarz0\\OneDrive\\Документы\\GitHub\\OOP_3sem\\SpaceBattle_official\\SpaceBattle.Tests\\SpaceBattle.Tests.csproj": {
+    "C:\\Users\\computer\\Desktop\\Zaslavsckiy\\SpaceBattle.Tests\\SpaceBattle.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jarz0\\OneDrive\\Документы\\GitHub\\OOP_3sem\\SpaceBattle_official\\SpaceBattle.Tests\\SpaceBattle.Tests.csproj",
+        "projectUniqueName": "C:\\Users\\computer\\Desktop\\Zaslavsckiy\\SpaceBattle.Tests\\SpaceBattle.Tests.csproj",
         "projectName": "SpaceBattle.Tests",
-        "projectPath": "C:\\Users\\jarz0\\OneDrive\\Документы\\GitHub\\OOP_3sem\\SpaceBattle_official\\SpaceBattle.Tests\\SpaceBattle.Tests.csproj",
-        "packagesPath": "C:\\Users\\jarz0\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jarz0\\OneDrive\\Документы\\GitHub\\OOP_3sem\\SpaceBattle_official\\SpaceBattle.Tests\\obj\\",
+        "projectPath": "C:\\Users\\computer\\Desktop\\Zaslavsckiy\\SpaceBattle.Tests\\SpaceBattle.Tests.csproj",
+        "packagesPath": "C:\\Users\\computer\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\computer\\Desktop\\Zaslavsckiy\\SpaceBattle.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jarz0\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\computer\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\jarz0\\OneDrive\\Документы\\GitHub\\OOP_3sem\\SpaceBattle_official\\SpaceBattle.Lib\\SpaceBattle.Lib.csproj": {
-                "projectPath": "C:\\Users\\jarz0\\OneDrive\\Документы\\GitHub\\OOP_3sem\\SpaceBattle_official\\SpaceBattle.Lib\\SpaceBattle.Lib.csproj"
+              "C:\\Users\\computer\\Desktop\\Zaslavsckiy\\SpaceBattle.Lib\\SpaceBattle.Lib.csproj": {
+                "projectPath": "C:\\Users\\computer\\Desktop\\Zaslavsckiy\\SpaceBattle.Lib\\SpaceBattle.Lib.csproj"
               }
             }
           }
@@ -148,7 +152,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
