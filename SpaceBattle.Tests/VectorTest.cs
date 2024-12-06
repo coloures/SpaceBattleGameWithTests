@@ -16,10 +16,9 @@ public class VectorTest
     [Fact]
     public void TestComparingVectorWithNotVectorType()
     {
-        Vector vector1 = new Vector(12, 5);
-        bool Equality = vector1.Equals(new int[] { 12, 5 });
+        var vector1 = new Vector(12, 5);
+        var Equality = vector1.Equals(new int[] { 12, 5 });
         Assert.False(Equality);
-
     }
     [Fact]
     public void TestSameVectorsAreWithDifferentDimentions()
@@ -35,7 +34,6 @@ public class VectorTest
         var vector1 = new Vector(10, 5);
         var vector2 = new Vector(12, 5);
         Assert.NotEqual(vector1, vector2);
-
     }
     [Fact]
     public void TestSummationPositive()
