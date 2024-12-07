@@ -1,5 +1,4 @@
 namespace SpaceBattle.Tests;
-using Moq;
 
 public class VectorTest
 {
