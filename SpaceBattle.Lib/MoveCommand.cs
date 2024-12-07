@@ -1,7 +1,7 @@
 namespace SpaceBattle.Lib;
 public class Move : ICommand
 {
-    IMovingObject MovingObject;
+    public readonly IMovingObject MovingObject;
     public Move(IMovingObject MovingObject)
     {
         this.MovingObject = MovingObject;
