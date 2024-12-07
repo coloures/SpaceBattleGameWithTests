@@ -1,4 +1,5 @@
 namespace SpaceBattle.Tests;
+using SpaceBattle.Lib;
 
 public class VectorTest
 {
