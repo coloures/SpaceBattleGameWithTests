@@ -10,8 +10,8 @@ public class VectorTest
         var vector2 = new Vector(12, 5);
         Assert.NotSame(vector1, vector2);
         Assert.Equal(vector1, vector2);
-
     }
+
     [Fact]
     public void TestComparingVectorWithNotVectorType()
     {
@@ -19,14 +19,15 @@ public class VectorTest
         var Equality = vector1.Equals(new int[] { 12, 5 });
         Assert.False(Equality);
     }
+
     [Fact]
     public void TestSameVectorsAreWithDifferentDimentions()
     {
         var vector1 = new Vector(12, 5, 10);
         var vector2 = new Vector(12, 5);
         Assert.NotEqual(vector1, vector2);
-
     }
+
     [Fact]
     public void TestSameVectorsAreNotEqual()
     {
@@ -34,6 +35,7 @@ public class VectorTest
         var vector2 = new Vector(12, 5);
         Assert.NotEqual(vector1, vector2);
     }
+
     [Fact]
     public void TestSummationPositive()
     {
@@ -43,6 +45,7 @@ public class VectorTest
         Assert.Equal(vector3, new Vector(22, 10));
 
     }
+
     [Fact]
     public void TestSummationNegative()
     {
@@ -52,6 +55,7 @@ public class VectorTest
         Assert.Equal(vector3, new Vector(-490, 10));
 
     }
+
     [Fact]
     public void TestSummationWithDifferentDimentions()
     {
@@ -62,6 +66,7 @@ public class VectorTest
             var vector3 = vector1 + vector2;
         });
     }
+
     [Fact]
     public void TestMultiplicationVector()
     {
