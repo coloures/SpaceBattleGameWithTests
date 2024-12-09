@@ -1,4 +1,4 @@
-namespace SpaceBattle.Lib;
+﻿namespace SpaceBattle.Lib;
 public class Move : ICommand
 {
     public readonly IMovingObject MovingObject;
