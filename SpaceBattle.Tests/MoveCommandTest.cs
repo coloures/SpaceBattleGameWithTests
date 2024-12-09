@@ -1,5 +1,5 @@
-﻿using SpaceBattle.Lib;
-using Moq;
+﻿using Moq;
+using SpaceBattle.Lib;
 namespace SpaceBattle.Tests;
 
 public class MoveCommandTest
