@@ -1,6 +1,6 @@
-using Moq;
-using App;
+﻿using App;
 using App.Scopes;
+using Moq;
 namespace SpaceBattle.Tests;
 public class RegisterDependencyMoveCommandStartTest
 {
@@ -28,7 +28,7 @@ public class RegisterDependencyMoveCommandStartTest
         order["Sender"] = _Sender.Object;
 
         var _MoveCommandStart = Ioc.Resolve<SpaceBattle.Lib.StartMoveCommand>("Actions.Move.Start", order);
-        
+
         _MoveCommandStart.Execute();
 
         _Sender.Verify(x => x.Send(It.IsAny<SpaceBattle.Lib.ICommand>()), Times.Once);
@@ -50,10 +50,11 @@ public class RegisterDependencyMoveCommandStartTest
         order["Command"] = _BridgeCommand.Object;
         order["Sender"] = _Sender.Object;
 
-        Assert.Throws<System.Collections.Generic.KeyNotFoundException>( 
-            ()=>{
-            var _MoveCommandStart = Ioc.Resolve<SpaceBattle.Lib.StartMoveCommand>("Actions.Move.Start", order);
-            _MoveCommandStart.Execute();
+        Assert.Throws<System.Collections.Generic.KeyNotFoundException>(
+            () =>
+            {
+                var _MoveCommandStart = Ioc.Resolve<SpaceBattle.Lib.StartMoveCommand>("Actions.Move.Start", order);
+                _MoveCommandStart.Execute();
             }
         );
 
