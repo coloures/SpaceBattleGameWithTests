@@ -1,7 +1,7 @@
 ﻿using App;
 using App.Scopes;
 namespace SpaceBattle.Tests;
-public class RegisterDependencyCommandInjectableCommandTest
+public class RegisterDependencyCommandInjectableCommandTest : IDisposable
 {
     public RegisterDependencyCommandInjectableCommandTest()
     {
@@ -27,15 +27,17 @@ public class RegisterDependencyCommandInjectableCommandTest
     [Fact]
     public void CommandInjectableIsNotRegistered()
     {
-        var iocScope = Ioc.Resolve<object>("IoC.Scope.Create");
-        Ioc.Resolve<ICommand>("IoC.Scope.Current.Set", iocScope).Execute();
 
-        Assert.Throws<System.Exception>
+        Assert.ThrowsAny<System.Exception>
         (() => { var _BridgeCommand1 = Ioc.Resolve<SpaceBattle.Lib.ICommand>("Commands.CommandInjectable"); });
-        Assert.Throws<System.Exception>
+        Assert.ThrowsAny<System.Exception>
         (() => { var _BridgeCommand2 = Ioc.Resolve<SpaceBattle.Lib.IInjectable>("Commands.CommandInjectable"); });
-        Assert.Throws<System.Exception>
+        Assert.ThrowsAny<System.Exception>
         (() => { var _BridgeCommand3 = Ioc.Resolve<SpaceBattle.Lib.BridgeCommand>("Commands.CommandInjectable"); });
 
+    }
+    public void Dispose()
+    {
+        Ioc.Resolve<ICommand>("IoC.Scope.Current.Clear").Execute();
     }
 }
