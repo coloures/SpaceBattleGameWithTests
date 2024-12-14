@@ -6,7 +6,6 @@ public class RegisterIoCDependencyActionsStartTest : IDisposable
 {
     public RegisterIoCDependencyActionsStartTest()
     {
-        Thread.Sleep(100);
         new InitCommand().Execute();
         var iocScope = Ioc.Resolve<object>("IoC.Scope.Create");
 
