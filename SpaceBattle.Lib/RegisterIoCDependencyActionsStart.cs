@@ -1,4 +1,4 @@
-namespace SpaceBattle.Lib;
+﻿namespace SpaceBattle.Lib;
 using App;
 public class RegisterIocDependencyActionsStart : ICommand
 {
@@ -10,7 +10,7 @@ public class RegisterIocDependencyActionsStart : ICommand
           (object[] args) =>
             new StartCommand((ICommand)((IDictionary<string, object>)args[0])["Command"],
             (ISender)((IDictionary<string, object>)args[0])["Sender"],
-            (IDictionary<string, object>)((IDictionary<string, object>)args[0])["Object"], 
+            (IDictionary<string, object>)((IDictionary<string, object>)args[0])["Object"],
             (string)((IDictionary<string, object>)args[0])["Label"])).Execute();
     }
 }

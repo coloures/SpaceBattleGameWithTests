@@ -1,4 +1,4 @@
-namespace SpaceBattle.Lib;
+﻿namespace SpaceBattle.Lib;
 public class StartCommand : ICommand
 {
     private readonly ICommand _bridgeCommand;

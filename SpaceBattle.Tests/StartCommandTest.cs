@@ -1,4 +1,4 @@
-namespace SpaceBattle.Tests;
+﻿namespace SpaceBattle.Tests;
 using Moq;
 using SpaceBattle.Lib;
 public class StartCommandTest
