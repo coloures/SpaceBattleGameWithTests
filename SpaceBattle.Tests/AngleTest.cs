@@ -15,7 +15,6 @@ public class AngleTest
     [Fact]
     public void TestAdditionThrowsException()
     {
-          
         var angl1 = new Angle(13);
         angl1 = null; 
         var angl2 = new Angle(12);
