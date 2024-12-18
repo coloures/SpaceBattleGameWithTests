@@ -15,10 +15,10 @@ public class AngleTest
     [Fact]
     public void TestAdditionThrowsException()
     {
-        Angle angl1 = null;
+        Angle angl1 = null; 
         var angl2 = new Angle(12);
         Assert.Throws<ArgumentNullException>(() => angl1 + angl2);
-    }
+         }
 
     [Fact]
     public void TestComparingAngleWithNotAngleType()

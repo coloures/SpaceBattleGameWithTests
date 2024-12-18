@@ -2,7 +2,8 @@
 
 public class Angle
 {
-    private int A { get; set; }
+    public int A { get; set; }
+
     private const int B = 360;
     public Angle(int a)
     {
@@ -36,4 +37,3 @@ public class Angle
         return A.GetHashCode();
     }
 }
-
