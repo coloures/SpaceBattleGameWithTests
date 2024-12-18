@@ -14,6 +14,7 @@
 
 # Build results
 SpaceBattle.Tests/obj/
+SpaceBattle.Lib/obj/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
