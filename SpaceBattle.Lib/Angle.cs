@@ -2,8 +2,8 @@
 
 public class Angle
 {
-    public int A { get; set; }
-    const int B = 360;
+    private int A { get; set; }
+    private const int B = 360;
     public Angle(int a)
     {
         A = a;
@@ -15,22 +15,25 @@ public class Angle
         {
             throw new ArgumentNullException("Один из углов равен null");
         }
-        int sum = (angl1.A + angl2.A) % B;
+
+        var sum = (angl1.A + angl2.A) % B;
         return new Angle(sum);
     }
 
     public override bool Equals(object? obj)
     {
         if (obj == null || !(obj is Angle))
+        {
             return false;
+        }
 
-        Angle angle1 = (Angle)obj;
-        return this.A == angle1.A;
+        var angle1 = (Angle)obj;
+        return A == angle1.A;
     }
 
     public override int GetHashCode()
     {
-        return this.A.GetHashCode();
+        return A.GetHashCode();
     }
-
 }
+

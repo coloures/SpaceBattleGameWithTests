@@ -1,6 +1,5 @@
 ﻿namespace SpaceBattle.Tests;
 using SpaceBattle.Lib;
-using Moq;
 
 public class AngleTest
 {
@@ -17,23 +16,23 @@ public class AngleTest
     public void TestAdditionThrowsException()
     {
         Angle angl1 = null;
-        Angle angl2 = new Angle(12);
+        var angl2 = new Angle(12);
         Assert.Throws<ArgumentNullException>(() => angl1 + angl2);
     }
 
     [Fact]
     public void TestComparingAngleWithNotAngleType()
     {
-        Angle angl1 = new Angle(12);
-        bool Equality = angl1.Equals(12);
+        var angl1 = new Angle(12);
+        var Equality = angl1.Equals(12);
         Assert.False(Equality);
     }
 
     [Fact]
     public void TestEqualsObjectNull()
     {
-        Angle angl1 = new Angle(12);
-        bool Equality = angl1.Equals(null);
+        var angl1 = new Angle(12);
+        var Equality = angl1.Equals(null);
         Assert.False(Equality);
     }
 
