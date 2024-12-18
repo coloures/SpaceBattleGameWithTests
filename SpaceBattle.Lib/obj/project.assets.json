@@ -8,32 +8,24 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Gleb\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\MyPC\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Visual_Studio_Code_projects\\SpaceBattleGameWithTests\\SpaceBattle.Lib\\SpaceBattle.Lib.csproj",
+      "projectUniqueName": "C:\\Users\\MyPC\\Code\\OOP_3sem\\SpaceBattle.Lib\\SpaceBattle.Lib.csproj",
       "projectName": "SpaceBattle.Lib",
-      "projectPath": "E:\\Visual_Studio_Code_projects\\SpaceBattleGameWithTests\\SpaceBattle.Lib\\SpaceBattle.Lib.csproj",
-      "packagesPath": "C:\\Users\\Gleb\\.nuget\\packages\\",
-      "outputPath": "E:\\Visual_Studio_Code_projects\\SpaceBattleGameWithTests\\SpaceBattle.Lib\\obj\\",
+      "projectPath": "C:\\Users\\MyPC\\Code\\OOP_3sem\\SpaceBattle.Lib\\SpaceBattle.Lib.csproj",
+      "packagesPath": "C:\\Users\\MyPC\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\MyPC\\Code\\OOP_3sem\\SpaceBattle.Lib\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Gleb\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\MyPC\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -72,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.404/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

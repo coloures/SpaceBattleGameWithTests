@@ -1,13 +1,6 @@
-namespace SpaceBattle.Lib;
-public interface IMovingObject
-{
-    public Vector Location { get; set; }
-    public Vector Velocity { get; }
-}
-
 public class Vector
 {
-    public int[] coordinates;
+    private int[] coordinates;
     public Vector(params int[] coordinates)
     {
         this.coordinates = coordinates;
