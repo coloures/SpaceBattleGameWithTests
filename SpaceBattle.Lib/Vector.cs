@@ -9,16 +9,24 @@
     {
         if (a.coordinates.Length != b.coordinates.Length)
         {
-            throw new Exception();
+            throw new ArgumentException();
         }
 
         a.coordinates = a.coordinates.Zip(b.coordinates, (x, y) => x + y).ToArray<int>();
         return a;
     }
-    public static Vector operator *(Vector a, int b)
+    public static bool operator ==(Vector left, Vector right)
     {
-        a.coordinates = a.coordinates.Select(x => x * b).ToArray();
-        return a;
+        if (left is null)
+        {
+            return right is null;
+        }
+
+        return left.Equals(right);
+    }
+    public static bool operator !=(Vector left, Vector right)
+    {
+        return !(left == right);
     }
     public override bool Equals(object? obj)
     {
