@@ -71,19 +71,20 @@ public class VectorTest
     }
 
     [Fact]
-    public void TestOperationEqualityNullOne()
-    {
-        var vector1 = new Vector(10, 5);
-        Vector? vector2 = null;
-        Assert.True(vector1 != vector2);
-    }
-
-    [Fact]
     public void TestOperationEqualityNullTwo()
     {
         var vector2 = new Vector(10, 5);
-        Vector vector1 = null;
-        Assert.True(vector1 != vector2);
+        Vector? vector1 = null;
+        Assert.True(vector1! != vector2);
+    }
+
+    [Fact]
+    public void TestEqualityMethodWithNotVector()
+    {
+        var vector1 = new Vector(10, 5);
+        var vector2 = new int[10, 5];
+        var notequal = vector1.Equals(vector2);
+        Assert.True(!notequal);
     }
 
     [Fact]
