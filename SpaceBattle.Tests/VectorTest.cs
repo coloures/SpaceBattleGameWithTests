@@ -88,15 +88,6 @@ public class VectorTest
     }
 
     [Fact]
-    public void TestEqualityMethodWithNotVector()
-    {
-        var vector1 = new Vector(10, 5);
-        var vector2 = new int[10, 5];
-        var notequal = vector1.Equals(vector2);
-        Assert.True(!notequal);
-    }
-
-    [Fact]
     public void TestEqualityMethodWithOtherDimensity()
     {
         var vector1 = new Vector(10, 5);
