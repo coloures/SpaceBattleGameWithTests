@@ -1,9 +1,9 @@
-using App;
+﻿using App;
 using App.Scopes;
 using Moq;
 namespace SpaceBattle.Tests;
 
-public class StrategyforMacroCommandTests: IDisposable
+public class StrategyforMacroCommandTests : IDisposable
 {
     public StrategyforMacroCommandTests()
     {
@@ -20,19 +20,20 @@ public class StrategyforMacroCommandTests: IDisposable
           "IoC.Register",
           "Specs.Macro.Test",
           (object[] args) =>
-            new string[]{"TypicalCommand"}).Execute();
+            new string[] { "TypicalCommand" }).Execute();
         Ioc.Resolve<App.ICommand>(
           "IoC.Register",
           "TypicalCommand",
           (object[] args) =>
           {
-            return cmd.Object;
+              return cmd.Object;
           }
             ).Execute();
         Ioc.Resolve<App.ICommand>(
             "IoC.Register",
             "Command.Macro",
-            (object[] args) => {
+            (object[] args) =>
+            {
                 var cmds = (SpaceBattle.Lib.ICommand[])args;
                 return new SpaceBattle.Lib.MacroCommand(cmds);
             }
@@ -53,19 +54,20 @@ public class StrategyforMacroCommandTests: IDisposable
           "TypicalCommand",
           (object[] args) =>
           {
-            return cmd.Object;
+              return cmd.Object;
           }
             ).Execute();
         Ioc.Resolve<App.ICommand>(
             "IoC.Register",
             "Command.Macro",
-            (object[] args) => {
+            (object[] args) =>
+            {
                 var cmds = (SpaceBattle.Lib.ICommand[])args;
                 return new SpaceBattle.Lib.MacroCommand(cmds);
             }
             ).Execute();
         var strategy = new SpaceBattle.Lib.CreateMacroCommandStrategy("Macro.Test");
-        Assert.Throws<Exception>(()=> 
+        Assert.Throws<Exception>(() =>
         {
             var MacroCommand = strategy.Resolve(new object());
             MacroCommand.Execute();
@@ -79,17 +81,18 @@ public class StrategyforMacroCommandTests: IDisposable
           "IoC.Register",
           "Specs.Macro.Test",
           (object[] args) =>
-            new string[]{"TypicalCommand"}).Execute();
+            new string[] { "TypicalCommand" }).Execute();
         Ioc.Resolve<App.ICommand>(
             "IoC.Register",
             "Command.Macro",
-            (object[] args) => {
+            (object[] args) =>
+            {
                 var cmds = (SpaceBattle.Lib.ICommand[])args;
                 return new SpaceBattle.Lib.MacroCommand(cmds);
             }
             ).Execute();
         var strategy = new SpaceBattle.Lib.CreateMacroCommandStrategy("Macro.Test");
-        Assert.Throws<Exception>(()=> 
+        Assert.Throws<Exception>(() =>
         {
             var MacroCommand = strategy.Resolve(new object());
             MacroCommand.Execute();
@@ -104,17 +107,17 @@ public class StrategyforMacroCommandTests: IDisposable
           "IoC.Register",
           "Specs.Macro.Test",
           (object[] args) =>
-            new string[]{"TypicalCommand"}).Execute();
+            new string[] { "TypicalCommand" }).Execute();
         Ioc.Resolve<App.ICommand>(
           "IoC.Register",
           "TypicalCommand",
           (object[] args) =>
           {
-            return cmd.Object;
+              return cmd.Object;
           }
             ).Execute();
         var strategy = new SpaceBattle.Lib.CreateMacroCommandStrategy("Macro.Test");
-        Assert.Throws<Exception>(()=> 
+        Assert.Throws<Exception>(() =>
         {
             var MacroCommand = strategy.Resolve(new object());
             MacroCommand.Execute();
