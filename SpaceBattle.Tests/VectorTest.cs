@@ -74,7 +74,7 @@ public class VectorTest
     public void TestOperationEqualityNullOne()
     {
         var vector1 = new Vector(10, 5);
-        Vector vector2 = null;
+        Vector? vector2 = null;
         Assert.True(vector1 != vector2);
     }
 
