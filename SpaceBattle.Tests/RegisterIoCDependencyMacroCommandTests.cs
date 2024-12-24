@@ -1,4 +1,4 @@
-using App;
+﻿using App;
 using App.Scopes;
 using Moq;
 namespace SpaceBattle.Tests;
@@ -19,7 +19,7 @@ public class RegisterDependencyMacroCommandTests : IDisposable
         var temp = new Lib.RegisterDependencyMacroCommand();
         temp.Execute();
 
-        var MacroCmd = Ioc.Resolve<Lib.MacroCommand>("Commands.Macro",  new Lib.ICommand[] { cmd.Object, cmd.Object });
+        var MacroCmd = Ioc.Resolve<Lib.MacroCommand>("Commands.Macro", new Lib.ICommand[] { cmd.Object, cmd.Object });
 
         MacroCmd.Execute();
 
@@ -34,7 +34,7 @@ public class RegisterDependencyMacroCommandTests : IDisposable
 
         Assert.Throws<Exception>(() =>
         {
-            var MacroCmd = Ioc.Resolve<Lib.MacroCommand>("Commands.Macro",new Lib.ICommand[] { cmd.Object, cmd.Object });
+            var MacroCmd = Ioc.Resolve<Lib.MacroCommand>("Commands.Macro", new Lib.ICommand[] { cmd.Object, cmd.Object });
             MacroCmd.Execute();
         });
         cmd.Verify(x => x.Execute(), Times.Never);
