@@ -1,4 +1,4 @@
-namespace SpaceBattle.Tests;
+﻿namespace SpaceBattle.Tests;
 using Moq;
 using SpaceBattle.Lib;
 public class StopCommandTest
@@ -29,7 +29,7 @@ public class StopCommandTest
         _gameobject.SetupSet(x => x[_label] = It.IsAny<ICommand>()).Throws<Exception>();
         var _isender = new Mock<ISender>();
 
-        var StopCommand = new StopCommand( _isender.Object, _gameobject.Object, _label);
+        var StopCommand = new StopCommand(_isender.Object, _gameobject.Object, _label);
 
         // Act
         Assert.Throws<Exception>(() => StopCommand.Execute());
