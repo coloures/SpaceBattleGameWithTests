@@ -28,6 +28,10 @@ public class RegisterIocDependencyNamesAndShipsTests : IDisposable
         {
             var ship_ = Ioc.Resolve<Lib.IObject>("NamesAndShipsRepositoryGetShip", "any_obj");
         });
+        Assert.ThrowsAny<Exception>(() =>
+        {
+            var ship_ = Ioc.Resolve<Lib.IObject>("NamesAndShipsRepositoryRemoveShip", "any_obj");
+        });
     }
     [Fact]
     public void NamesAndShipsIsNotRegisteredAdding()

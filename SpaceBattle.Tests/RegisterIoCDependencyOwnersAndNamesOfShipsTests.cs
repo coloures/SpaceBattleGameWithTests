@@ -31,6 +31,11 @@ public class RegisterIocDependencyOwnerAndNamesOfShipsTests : IDisposable
         {
             var ship_ = Ioc.Resolve<Lib.IObject>("OwnersAndNamesOfShipsRepositoryAddShip", "any_obj");
         });
+
+        Assert.ThrowsAny<Exception>(() =>
+        {
+            var ship_ = Ioc.Resolve<Lib.IObject>("OwnersAndNamesOfShipsRepositoryRemoveShip", "any_obj");
+        });
     }
     [Fact]
     public void OwnerAndNamesOfShipsIsNotRegisteredAdding()
