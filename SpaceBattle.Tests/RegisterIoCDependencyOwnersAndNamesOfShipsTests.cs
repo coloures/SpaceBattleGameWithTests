@@ -29,7 +29,7 @@ public class RegisterIocDependencyOwnerAndNamesOfShipsTests : IDisposable
 
         Assert.ThrowsAny<Exception>(() =>
         {
-            var ship_ = Ioc.Resolve<Lib.IObject>("OwnersAndNamesOfShipsRepositoryAddShip", "any_obj");
+            var ship_ = Ioc.Resolve<Lib.IObject>("OwnersAndNamesOfShipsRepositoryGetShips", "any_obj");
         });
 
         Assert.ThrowsAny<Exception>(() =>
