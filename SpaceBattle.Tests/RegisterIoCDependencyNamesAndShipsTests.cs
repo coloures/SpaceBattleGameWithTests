@@ -17,12 +17,12 @@ public class RegisterIocDependencyNamesAndShipsTests : IDisposable
         var iobj_ = new Mock<Lib.IObject>();
         var temp = new Lib.RegisterIocDependencyNamesAndShips();
         temp.Execute();
-        Ioc.Resolve<object>("NamesAndShipsRepositoryAddShip", "any_obj", iobj_.Object);
+        Ioc.Resolve<Lib.ICommand>("NamesAndShipsRepositoryAddShip", "any_obj", iobj_.Object).Execute();
 
         var ship = Ioc.Resolve<Lib.IObject>("NamesAndShipsRepositoryGetShip", "any_obj");
         Assert.Equal(iobj_.Object, ship);
 
-        Ioc.Resolve<object>("NamesAndShipsRepositoryRemoveShip", "any_obj");
+        Ioc.Resolve<Lib.ICommand>("NamesAndShipsRepositoryRemoveShip", "any_obj").Execute();
 
         Assert.ThrowsAny<Exception>(() =>
         {
@@ -30,7 +30,7 @@ public class RegisterIocDependencyNamesAndShipsTests : IDisposable
         });
         Assert.ThrowsAny<Exception>(() =>
         {
-            var ship_ = Ioc.Resolve<Lib.IObject>("NamesAndShipsRepositoryRemoveShip", "any_obj");
+            Ioc.Resolve<Lib.ICommand>("NamesAndShipsRepositoryRemoveShip", "any_obj").Execute();
         });
     }
     [Fact]
@@ -39,7 +39,7 @@ public class RegisterIocDependencyNamesAndShipsTests : IDisposable
         var iobj_ = new Mock<Lib.IObject>();
         Assert.ThrowsAny<Exception>(() =>
         {
-            Ioc.Resolve<object>("NamesAndShipsRepositoryAddShip", "any_obj", iobj_.Object);
+            Ioc.Resolve<Lib.ICommand>("NamesAndShipsRepositoryAddShip", "any_obj", iobj_.Object).Execute();
         });
     }
     [Fact]
@@ -47,7 +47,7 @@ public class RegisterIocDependencyNamesAndShipsTests : IDisposable
     {
         Assert.ThrowsAny<Exception>(() =>
         {
-            Ioc.Resolve<object>("NamesAndShipsRepositoryRemoveShip", "any_obj");
+            Ioc.Resolve<Lib.ICommand>("NamesAndShipsRepositoryRemoveShip", "any_obj").Execute();
         });
     }
     [Fact]

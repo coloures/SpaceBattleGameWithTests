@@ -12,8 +12,7 @@ public class RegisterIocDependencyNamesAndShips : ICommand
             "NamesAndShipsRepositoryAddShip", // IdОбъекта - Объект
             (object[] args) =>
             {
-                Names_and_Ships.Add((string)args[0], (IObject)args[1]);
-                return new object();
+                return new AddElemRepositoryCommand<IObject>(Names_and_Ships, (string)args[0], (IObject)args[1]);
             }
         ).Execute();
 
@@ -22,14 +21,7 @@ public class RegisterIocDependencyNamesAndShips : ICommand
             "NamesAndShipsRepositoryRemoveShip",
             (object[] args) =>
             {
-                if (Names_and_Ships.Remove((string)args[0]))
-                {
-                    return new object();
-                }
-                else
-                {
-                    throw new Exception();
-                }
+                return new DeleteElemRepositoryCommand<IObject>(Names_and_Ships, (string)args[0]);
             }
         ).Execute();
 

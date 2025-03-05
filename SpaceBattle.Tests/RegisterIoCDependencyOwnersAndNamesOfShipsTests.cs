@@ -15,26 +15,26 @@ public class RegisterIocDependencyOwnerAndNamesOfShipsTests : IDisposable
     {
         var temp = new Lib.RegisterIocDependencyOwnersAndNamesOfShips();
         temp.Execute();
-        Ioc.Resolve<object>("OwnersAndNamesOfShipsRepositoryAddShip", "any_obj", "first_owner");
+        Ioc.Resolve<Lib.ICommand>("OwnersAndNamesOfShipsRepositoryAddShip", "any_obj", "first_owner").Execute();
 
         var owner = Ioc.Resolve<List<string>>("OwnersAndNamesOfShipsRepositoryGetShips", "any_obj");
         Assert.Equal("first_owner", owner.Single());
 
-        Ioc.Resolve<object>("OwnersAndNamesOfShipsRepositoryAddShip", "any_obj", "second_owner");
+        Ioc.Resolve<Lib.ICommand>("OwnersAndNamesOfShipsRepositoryAddShip", "any_obj", "second_owner").Execute();
 
         owner = Ioc.Resolve<List<string>>("OwnersAndNamesOfShipsRepositoryGetShips", "any_obj");
         Assert.Equal("second_owner", owner.Last());
 
-        Ioc.Resolve<object>("OwnersAndNamesOfShipsRepositoryRemoveShip", "any_obj");
+        Ioc.Resolve<Lib.ICommand>("OwnersAndNamesOfShipsRepositoryRemoveShip", "any_obj").Execute();
 
         Assert.ThrowsAny<Exception>(() =>
         {
-            var ship_ = Ioc.Resolve<Lib.IObject>("OwnersAndNamesOfShipsRepositoryGetShips", "any_obj");
+            var ship_ = Ioc.Resolve<List<string>>("OwnersAndNamesOfShipsRepositoryGetShips", "any_obj");
         });
 
         Assert.ThrowsAny<Exception>(() =>
         {
-            var ship_ = Ioc.Resolve<Lib.IObject>("OwnersAndNamesOfShipsRepositoryRemoveShip", "any_obj");
+            Ioc.Resolve<Lib.ICommand>("OwnersAndNamesOfShipsRepositoryRemoveShip", "any_obj").Execute();
         });
     }
     [Fact]
@@ -42,7 +42,7 @@ public class RegisterIocDependencyOwnerAndNamesOfShipsTests : IDisposable
     {
         Assert.ThrowsAny<Exception>(() =>
         {
-            Ioc.Resolve<object>("OwnersAndNamesOfShipsRepositoryAddShip", "any_obj", "first_owner");
+            Ioc.Resolve<Lib.ICommand>("OwnersAndNamesOfShipsRepositoryAddShip", "any_obj", "first_owner").Execute();
         });
     }
     [Fact]
@@ -50,7 +50,7 @@ public class RegisterIocDependencyOwnerAndNamesOfShipsTests : IDisposable
     {
         Assert.ThrowsAny<Exception>(() =>
         {
-            Ioc.Resolve<object>("OwnersAndNamesOfShipsRepositoryRemoveShip", "any_obj");
+            Ioc.Resolve<Lib.ICommand>("OwnersAndNamesOfShipsRepositoryRemoveShip", "any_obj").Execute();
         });
     }
     [Fact]

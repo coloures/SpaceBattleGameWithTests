@@ -12,17 +12,7 @@ public class RegisterIocDependencyOwnersAndNamesOfShips : ICommand
             "OwnersAndNamesOfShipsRepositoryAddShip",
             (object[] args) =>
             {
-                if (OwnersAndNames_of_Ships.ContainsKey((string)args[0]))
-                {
-                    OwnersAndNames_of_Ships[(string)args[0]].Add((string)args[1]);
-                }
-                else
-                {
-                    var temp = new List<string>() { (string)args[1] };
-                    OwnersAndNames_of_Ships.Add((string)args[0], temp); // первое - код "обладателя", второе - код корабля
-                }
-
-                return new object();
+                return new AddMultipleElemsRepositoryCommand<string>(OwnersAndNames_of_Ships, (string)args[0], (string)args[1]);
             }
         ).Execute();
 
@@ -31,14 +21,7 @@ public class RegisterIocDependencyOwnersAndNamesOfShips : ICommand
             "OwnersAndNamesOfShipsRepositoryRemoveShip",
             (object[] args) =>
             {
-                if (OwnersAndNames_of_Ships.Remove((string)args[0]))
-                {
-                    return new object();
-                }
-                else
-                {
-                    throw new Exception();
-                }
+                return new DeleteElemRepositoryCommand<List<string>>(OwnersAndNames_of_Ships, (string)args[0]);
             }
         ).Execute();
 
