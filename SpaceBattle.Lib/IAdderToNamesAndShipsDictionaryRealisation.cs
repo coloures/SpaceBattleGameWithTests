@@ -1,7 +1,7 @@
-using App;
+﻿using App;
 
 namespace SpaceBattle.Lib;
-public class IAdderToNamesAndShipsDictionaryRealisation: IAdderToNamesAndShipsDictionary
+public class IAdderToNamesAndShipsDictionaryRealisation : IAdderToNamesAndShipsDictionary
 {
     public void Add(IDictionary<string, object> obj, string Id)
     {

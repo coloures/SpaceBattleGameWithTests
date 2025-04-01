@@ -1,4 +1,4 @@
-using App;
+﻿using App;
 using App.Scopes;
 namespace SpaceBattle.Lib.Tests;
 
@@ -34,7 +34,7 @@ public class IAdderToNamesAndShipsDictionaryRealisationTest : IDisposable
         var obj = new Dictionary<string, object>();
         var any_dict = new Dictionary<string, object>();
         var adder = new SpaceBattle.Lib.IAdderToNamesAndShipsDictionaryRealisation();
-        Assert.ThrowsAny<Exception>(() =>adder.Add(obj, "object1"));
+        Assert.ThrowsAny<Exception>(() => adder.Add(obj, "object1"));
         Assert.False(any_dict.ContainsKey("object1"));
     }
     public void Dispose()
