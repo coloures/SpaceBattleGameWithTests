@@ -1,4 +1,4 @@
-using Moq;
+﻿using Moq;
 using SpaceBattle.Lib;
 namespace SpaceBattle.Tests;
 
@@ -7,7 +7,7 @@ public class CheckForAbilitiesCommandTest
     [Fact]
     public void TestPositive()
     {
-        var abilities = new List<string>() {"moving", "shooting"};
+        var abilities = new List<string>() { "moving", "shooting" };
         var Ship = new Mock<IObject>();
         Ship.Setup(x => x.GetAbilities()).Returns(abilities).Verifiable();
         var order = new Dictionary<string, object>();
@@ -19,7 +19,7 @@ public class CheckForAbilitiesCommandTest
     [Fact]
     public void TestNegative()
     {
-        var abilities = new List<string>() {"moving", "shooting"};
+        var abilities = new List<string>() { "moving", "shooting" };
         var Ship = new Mock<IObject>();
         Ship.Setup(x => x.GetAbilities()).Returns(abilities).Verifiable();
         var order = new Dictionary<string, object>();
@@ -31,7 +31,7 @@ public class CheckForAbilitiesCommandTest
     [Fact]
     public void TestNoElemInDict()
     {
-        var abilities = new List<string>() {"moving", "shooting"};
+        var abilities = new List<string>() { "moving", "shooting" };
         var Ship = new Mock<IObject>();
         Ship.Setup(x => x.GetAbilities()).Returns(abilities).Verifiable();
         var order = new Dictionary<string, object>();

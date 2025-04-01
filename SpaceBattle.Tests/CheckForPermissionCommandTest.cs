@@ -1,4 +1,4 @@
-using Moq;
+﻿using Moq;
 using SpaceBattle.Lib;
 namespace SpaceBattle.Tests;
 
@@ -7,7 +7,7 @@ public class CheckForPermissionCommandTest
     [Fact]
     public void TestPositive()
     {
-        var rigths = new List<string>() {"Shoot", "Create", "Move"};
+        var rigths = new List<string>() { "Shoot", "Create", "Move" };
         var owner = new Mock<IOwner>();
         owner.Setup(x => x.GetRights()).Returns(rigths).Verifiable();
         var order = new Dictionary<string, object>();
@@ -19,7 +19,7 @@ public class CheckForPermissionCommandTest
     [Fact]
     public void TestNegative()
     {
-        var rigths = new List<string>() {"Shoot", "Create"};
+        var rigths = new List<string>() { "Shoot", "Create" };
         var owner = new Mock<IOwner>();
         owner.Setup(x => x.GetRights()).Returns(rigths).Verifiable();
         var order = new Dictionary<string, object>();
@@ -31,7 +31,7 @@ public class CheckForPermissionCommandTest
     [Fact]
     public void TestNoElemInDict()
     {
-        var rigths = new List<string>() {"Shoot", "Create"};
+        var rigths = new List<string>() { "Shoot", "Create" };
         var owner = new Mock<IOwner>();
         owner.Setup(x => x.GetRights()).Returns(rigths).Verifiable();
         var order = new Dictionary<string, object>();

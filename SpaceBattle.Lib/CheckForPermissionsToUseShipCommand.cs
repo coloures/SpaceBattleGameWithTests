@@ -1,4 +1,4 @@
-namespace SpaceBattle.Lib;
+﻿namespace SpaceBattle.Lib;
 public class CheckForPermissionsToUseShipCommand : ICommand // компонента макрокоманды Macro.Auth
 {
     public readonly List<string> PlayerShipsId;

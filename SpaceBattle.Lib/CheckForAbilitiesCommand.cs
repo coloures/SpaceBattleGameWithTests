@@ -1,4 +1,4 @@
-namespace SpaceBattle.Lib;
+﻿namespace SpaceBattle.Lib;
 
 public class CheckForAbilitiesCommand : ICommand // компонента макрокоманды Macro.Auth
 {
