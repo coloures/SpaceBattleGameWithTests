@@ -24,6 +24,7 @@ public class Game : SpaceBattle.Lib.ICommand
                 throw new Exception();
             }
         }
+
         timer.Reset();
     }
 }
