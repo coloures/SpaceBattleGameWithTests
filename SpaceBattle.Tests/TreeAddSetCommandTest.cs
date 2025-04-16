@@ -1,4 +1,4 @@
-namespace SpaceBattle.Tests;
+﻿namespace SpaceBattle.Tests;
 using System.Collections.Generic;
 using SpaceBattle.Lib;
 using Xunit;
@@ -39,7 +39,7 @@ public class TreeAddSetCommandTest
         Assert.True(tree[x].ContainsKey(y));
         Assert.True(tree[x][y].ContainsKey(vel_x));
         Assert.Contains(vel_y, tree[x][y][vel_x]);
-        Assert.Equal(1, tree[x][y][vel_x].Count);
+        Assert.Single(tree[x][y][vel_x]);
     }
 
     [Fact]
@@ -59,7 +59,7 @@ public class TreeAddSetCommandTest
         Assert.True(tree[x].ContainsKey(y));
         Assert.True(tree[x][y].ContainsKey(vel_x));
         Assert.Contains(vel_y, tree[x][y][vel_x]);
-        Assert.Equal(1, tree[x][y][vel_x].Count);
+        Assert.Single(tree[x][y][vel_x]);
     }
 
     [Fact]
@@ -80,7 +80,7 @@ public class TreeAddSetCommandTest
         Assert.True(tree[x].ContainsKey(y));
         Assert.True(tree[x][y].ContainsKey(vel_x));
         Assert.Contains(vel_y, tree[x][y][vel_x]);
-        Assert.Equal(1, tree[x][y][vel_x].Count);
+        Assert.Single(tree[x][y][vel_x]);
     }
 
     [Fact]
@@ -124,6 +124,6 @@ public class TreeAddSetCommandTest
         Assert.True(tree[x].ContainsKey(y));
         Assert.True(tree[x][y].ContainsKey(vel_x));
         Assert.Contains(vel_y, tree[x][y][vel_x]);
-        Assert.Equal(1, tree[x][y][vel_x].Count);
+        Assert.Single(tree[x][y][vel_x]);
     }
 }
