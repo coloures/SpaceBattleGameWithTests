@@ -16,4 +16,17 @@ public class GridCellDeleteCommandTest
 
         Assert.Empty(grid[0]);
     }
+    [Fact]
+    public void TestNegative()
+    {
+        var ship = new Dictionary<string, object>();
+        var grid = new List<IDictionary<string, object>>[2];
+        grid[0] = new List<IDictionary<string, object>>() { ship };
+
+        var cmd = new GridCellDeleteCommand(grid, 2, 1, ship, 2, 1);
+
+        cmd.Execute();
+
+        Assert.Single(grid[0]);
+    }
 }
