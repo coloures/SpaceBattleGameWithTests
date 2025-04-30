@@ -1,6 +1,6 @@
-namespace SpaceBattle.Lib;
+﻿namespace SpaceBattle.Lib;
 
-public class CollisionObject: ICollisionObject
+public class CollisionObject : ICollisionObject
 {
     public readonly IDictionary<string, object> Object;
     public readonly IGetterGrid getterGrid;
