@@ -12,7 +12,7 @@ namespace SpaceBattle.Tests
             var SecondShip = new Mock<ICollisionObject>();
             var Checker = new Mock<ICheckerNeighbourhood>();
             var Tree = new Mock<ITreeChecker>();
-            Tree.Setup(x => x.Check(It.IsAny<int>(),It.IsAny<int>(),It.IsAny<int>(),It.IsAny<int>())).Verifiable();
+            Tree.Setup(x => x.Check(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>())).Verifiable();
 
             FirstShip.Setup(s => s.AbsoluteLocation).Returns(new int[] { 0, 0 });
             SecondShip.Setup(s => s.AbsoluteLocation).Returns(new int[] { 1, 1 });
@@ -38,7 +38,7 @@ namespace SpaceBattle.Tests
             var SecondShip = new Mock<ICollisionObject>();
             var Checker = new Mock<ICheckerNeighbourhood>();
             var Tree = new Mock<ITreeChecker>();
-            Tree.Setup(x => x.Check(It.IsAny<int>(),It.IsAny<int>(),It.IsAny<int>(),It.IsAny<int>())).Verifiable();
+            Tree.Setup(x => x.Check(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>())).Verifiable();
 
             Checker.Setup(c => c.Check(It.IsAny<ICollisionObject>(), It.IsAny<ICollisionObject>()))
                       .Returns(false);
@@ -58,7 +58,7 @@ namespace SpaceBattle.Tests
             var SecondShip = new Mock<ICollisionObject>();
             var Checker = new Mock<ICheckerNeighbourhood>();
             var Tree = new Mock<ITreeChecker>();
-                        Tree.Setup(x => x.Check(It.IsAny<int>(),It.IsAny<int>(),It.IsAny<int>(),It.IsAny<int>())).Verifiable();
+            Tree.Setup(x => x.Check(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>())).Verifiable();
 
             FirstShip.Setup(s => s.AbsoluteLocation).Throws<Exception>();
             SecondShip.Setup(s => s.AbsoluteLocation).Returns(new int[] { 1, 1 });
@@ -73,7 +73,7 @@ namespace SpaceBattle.Tests
                 SecondShip.Object,
                 Checker.Object,
                 Tree.Object);
-            Assert.ThrowsAny<Exception>(() =>command.Execute());
+            Assert.ThrowsAny<Exception>(() => command.Execute());
             Tree.Verify(t => t.Check(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>()), Times.Never);
         }
         [Fact]
@@ -83,7 +83,7 @@ namespace SpaceBattle.Tests
             var SecondShip = new Mock<ICollisionObject>();
             var Checker = new Mock<ICheckerNeighbourhood>();
             var Tree = new Mock<ITreeChecker>();
-                        Tree.Setup(x => x.Check(It.IsAny<int>(),It.IsAny<int>(),It.IsAny<int>(),It.IsAny<int>())).Verifiable();
+            Tree.Setup(x => x.Check(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>())).Verifiable();
 
             Checker.Setup(c => c.Check(It.IsAny<ICollisionObject>(), It.IsAny<ICollisionObject>()))
                       .Throws<Exception>();
@@ -93,7 +93,7 @@ namespace SpaceBattle.Tests
                 SecondShip.Object,
                 Checker.Object,
                 Tree.Object);
-            Assert.ThrowsAny<Exception>(() =>command.Execute());
+            Assert.ThrowsAny<Exception>(() => command.Execute());
         }
         [Fact]
         public void Execute_TreeException()
@@ -102,7 +102,7 @@ namespace SpaceBattle.Tests
             var SecondShip = new Mock<ICollisionObject>();
             var Checker = new Mock<ICheckerNeighbourhood>();
             var Tree = new Mock<ITreeChecker>();
-            Tree.Setup(x => x.Check(It.IsAny<int>(),It.IsAny<int>(),It.IsAny<int>(),It.IsAny<int>())).Throws<Exception>().Verifiable();
+            Tree.Setup(x => x.Check(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>())).Throws<Exception>().Verifiable();
 
             FirstShip.Setup(s => s.AbsoluteLocation).Returns(new int[] { 0, 0 });
             SecondShip.Setup(s => s.AbsoluteLocation).Returns(new int[] { 1, 1 });
@@ -117,7 +117,7 @@ namespace SpaceBattle.Tests
                 SecondShip.Object,
                 Checker.Object,
                 Tree.Object);
-            Assert.ThrowsAny<Exception>(() =>command.Execute());
+            Assert.ThrowsAny<Exception>(() => command.Execute());
             Tree.Verify(t => t.Check(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>(), It.IsAny<int>()), Times.Once);
         }
     }
