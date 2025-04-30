@@ -1,4 +1,4 @@
-namespace SpaceBattle.Lib;
+﻿namespace SpaceBattle.Lib;
 
 public class CheckCollisionBetweenTwoElemsCommand : ICommand
 {
@@ -16,13 +16,13 @@ public class CheckCollisionBetweenTwoElemsCommand : ICommand
     }
     public void Execute()
     {
-        if(Checker!.Check(First_Ship!, Second_Ship!))
+        if (Checker!.Check(First_Ship!, Second_Ship!))
         {
             var x = Second_Ship!.AbsoluteLocation[0] - First_Ship!.AbsoluteLocation[0];
             var y = Second_Ship!.AbsoluteLocation[1] - First_Ship!.AbsoluteLocation[1];
             var vel_x = Second_Ship!.Velocity[0] - First_Ship!.Velocity[0];
             var vel_y = Second_Ship!.Velocity[1] - First_Ship!.Velocity[1];
             Tree.Check(x, y, vel_x, vel_y);
-        }   
+        }
     }
 }

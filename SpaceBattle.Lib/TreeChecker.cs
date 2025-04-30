@@ -1,7 +1,7 @@
-namespace SpaceBattle.Lib;
+﻿namespace SpaceBattle.Lib;
 using App;
 
-public class TreeChecker: ITreeChecker
+public class TreeChecker : ITreeChecker
 {
     public void Check(int x, int y, int vel_x, int vel_y)
     {
