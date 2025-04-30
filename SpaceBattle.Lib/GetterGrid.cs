@@ -1,5 +1,5 @@
-namespace SpaceBattle.Lib;
-public class GetterGrid: IGetterGrid
+﻿namespace SpaceBattle.Lib;
+public class GetterGrid : IGetterGrid
 {
     public readonly int size_x;
     public readonly int size_y;
@@ -15,6 +15,6 @@ public class GetterGrid: IGetterGrid
     public Vector GetGridLocation(Vector location)
     {
         var location_ints = location.GetCoordinates();
-        return new Vector((location_ints[0] - shift_x)/size_x, (location_ints[1] - shift_y)/size_y);
+        return new Vector((location_ints[0] - shift_x) / size_x, (location_ints[1] - shift_y) / size_y);
     }
 }

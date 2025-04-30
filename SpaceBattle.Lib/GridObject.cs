@@ -1,5 +1,5 @@
-namespace SpaceBattle.Lib;
-public class GridObject: IGridObject
+﻿namespace SpaceBattle.Lib;
+public class GridObject : IGridObject
 {
     public readonly IDictionary<string, object> Ship;
     public Vector GridLocationVector;
@@ -8,5 +8,5 @@ public class GridObject: IGridObject
         this.Ship = Ship;
     }
     public Vector AbsoluteLocation => (Vector)Ship["Location"];
-    public Vector GridLocation{ set => GridLocationVector = value;} 
+    public Vector GridLocation { set => GridLocationVector = value; }
 }

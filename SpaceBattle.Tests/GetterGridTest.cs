@@ -1,4 +1,4 @@
-namespace SpaceBattle.Tests;
+﻿namespace SpaceBattle.Tests;
 using SpaceBattle.Lib;
 public class GetterGridTest
 {
@@ -13,7 +13,7 @@ public class GetterGridTest
         var gettergrid = new GetterGrid(Grid);
 
         var vect = new Vector(10, 15);
-        Assert.Equal(new Vector(0,1), gettergrid.GetGridLocation(vect));
+        Assert.Equal(new Vector(0, 1), gettergrid.GetGridLocation(vect));
     }
     [Fact]
     public void TestNegativeDivisionByZer1()

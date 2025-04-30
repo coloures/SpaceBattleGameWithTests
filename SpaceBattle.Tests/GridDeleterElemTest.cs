@@ -1,4 +1,4 @@
-using App;
+﻿using App;
 namespace SpaceBattle.Tests;
 using App.Scopes;
 using Moq;
@@ -26,13 +26,14 @@ public class GridDeleterElemTest : IDisposable
         Ioc.Resolve<ICommand>(
             "IoC.Register",
             $"Grid_{name_grid}_deleteElem",
-            (object[] args) => {
+            (object[] args) =>
+            {
                 dct.Add(args[0]);
                 dct.Add(args[1]);
                 dct.Add(args[2]);
                 return cmd.Object;
             }).Execute();
-        
+
         var deleter = new SpaceBattle.Lib.GridDeleterElem();
         deleter.Delete(x, y, obj.Object, name_grid);
 
@@ -40,7 +41,7 @@ public class GridDeleterElemTest : IDisposable
         Assert.Equal(x, dct[0]);
         Assert.Equal(y, dct[1]);
         Assert.Same(obj.Object, dct[2]);
-        cmd.Verify(x=> x.Execute(), Times.Once);
+        cmd.Verify(x => x.Execute(), Times.Once);
 
     }
     [Fact]
@@ -50,7 +51,7 @@ public class GridDeleterElemTest : IDisposable
         var y = 8;
         var obj = new Mock<IDictionary<string, object>>();
         var name_grid = "First";
-        
+
         var deleter = new SpaceBattle.Lib.GridDeleterElem();
         Assert.ThrowsAny<Exception>(() => deleter.Delete(x, y, obj.Object, name_grid));
 

@@ -1,7 +1,7 @@
-namespace SpaceBattle.Lib;
+﻿namespace SpaceBattle.Lib;
 using App;
 
-public class GridAdderElem: IGridAdderElem
+public class GridAdderElem : IGridAdderElem
 {
     public void Add(int x, int y, IDictionary<string, object> ObjectItself, string name_grid)
     {

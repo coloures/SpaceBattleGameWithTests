@@ -1,4 +1,4 @@
-namespace SpaceBattle.Lib;
+﻿namespace SpaceBattle.Lib;
 using App;
 public class RegisterIoCDependencyMacroUpdateGrid : ICommand
 { // +

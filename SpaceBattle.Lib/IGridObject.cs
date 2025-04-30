@@ -1,6 +1,6 @@
-namespace SpaceBattle.Lib;
+﻿namespace SpaceBattle.Lib;
 public interface IGridObject
 {
-    Vector AbsoluteLocation {get;}
-    Vector GridLocation {set;}
+    Vector AbsoluteLocation { get; }
+    Vector GridLocation { set; }
 }

@@ -1,4 +1,4 @@
-using App;
+﻿using App;
 using App.Scopes;
 using Moq;
 namespace SpaceBattle.Tests;
@@ -24,8 +24,8 @@ public class RegisterIoCDependencyListForGridTest : IDisposable
     public void RegisterIoCDependencyListForGridTestIsNotRegistered()
     {
         var obj = new Mock<IDictionary<string, object>>();
-        Assert.ThrowsAny<Exception>(() =>Ioc.Resolve<SpaceBattle.Lib.ICommand>("Grid_testing_addElem", 8, 7, obj.Object).Execute());
-        Assert.ThrowsAny<Exception>(() =>Ioc.Resolve<SpaceBattle.Lib.ICommand>("Grid_testing_deleteElem", 8, 7, obj.Object).Execute());
+        Assert.ThrowsAny<Exception>(() => Ioc.Resolve<SpaceBattle.Lib.ICommand>("Grid_testing_addElem", 8, 7, obj.Object).Execute());
+        Assert.ThrowsAny<Exception>(() => Ioc.Resolve<SpaceBattle.Lib.ICommand>("Grid_testing_deleteElem", 8, 7, obj.Object).Execute());
     }
     public void Dispose()
     {

@@ -18,7 +18,7 @@ public class GridCellAddCommand : ICommand
     }
     public void Execute()
     {
-        if (x <= (size_x-1) && x >= 0 && y <= (size_y-1) && y >= 0)
+        if (x <= (size_x - 1) && x >= 0 && y <= (size_y - 1) && y >= 0)
         {
             if (!Grid[x + y * size_x].Contains(ship))
             {

@@ -1,4 +1,4 @@
-namespace SpaceBattle.Tests;
+﻿namespace SpaceBattle.Tests;
 using App;
 using App.Scopes;
 using Moq;

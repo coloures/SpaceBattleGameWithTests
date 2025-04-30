@@ -1,6 +1,6 @@
-namespace SpaceBattle.Lib;
+﻿namespace SpaceBattle.Lib;
 using App;
-public class GridDeleterElem: IGridDeleterElem
+public class GridDeleterElem : IGridDeleterElem
 {
     public void Delete(int x, int y, IDictionary<string, object> ObjectItself, string name_grid)
     {

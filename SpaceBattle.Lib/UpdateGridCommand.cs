@@ -1,4 +1,4 @@
-namespace SpaceBattle.Lib;
+﻿namespace SpaceBattle.Lib;
 public class UpdateGridCommand : ICommand // имеем макрокоманду DeleteFromGridCommand -> UpdateGridCommand -> AddToGridCommand
 { // + все интерфейсы реализованы + все тесты сделаны
     public readonly IGridObject obj;
