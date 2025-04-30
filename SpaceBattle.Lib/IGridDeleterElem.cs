@@ -1,6 +1,5 @@
 namespace SpaceBattle.Lib;
-public interface IGridObject
+public interface IGridDeleterElem
 {
-    Vector AbsoluteLocation {get;}
-    Vector GridLocation {set;}
+    void Delete(int x, int y, IDictionary<string, object> ObjectItself, string name_grid);
 }
